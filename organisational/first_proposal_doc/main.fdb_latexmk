@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1792411989.36492 "main.bcf" "main.bbl" "main" 1792412003.59503 0
-  "main.bcf" 1792412002 108659 bf141c05f1f4820bb3d45cb7d1b0ae09 "pdflatex"
+["biber main"] 1792412213.51024 "main.bcf" "main.bbl" "main" 1792412220.83026 0
+  "main.bcf" 1792412212 108256 833200cfe07f04b08c10d58e0ef28263 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1792411999.5469 "c:/Users/marta/OneDrive/Documenti/UNIFR/INFORMATIQUE/MASTER/Enterpreneurship/PlanMy/organisational/first_proposal_doc/main.tex" "main.pdf" "main" 1792412003.59728 0
-  "C:/Users/marta/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1792411987 114521 8fcaf690a3988c7190cef159a0fcbb62 ""
+["pdflatex"] 1792412210.13929 "c:/Users/marta/OneDrive/Documenti/UNIFR/INFORMATIQUE/MASTER/Enterpreneurship/PlanMy/organisational/first_proposal_doc/main.tex" "main.pdf" "main" 1792412220.83097 0
+  "C:/Users/marta/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1792412109 114521 8fcaf690a3988c7190cef159a0fcbb62 ""
   "C:/Users/marta/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1792411975 11548 ef5b7673c5a230583a0ed331be460c76 ""
   "C:/Users/marta/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1791555909 13333487 b387eddb31befe6711306d1b6edebb75 ""
   "C:/Users/marta/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
@@ -82,11 +82,11 @@
   "C:/Users/marta/AppData/Local/Programs/MiKTeX/tex/latex/logreq/logreq.sty" 1280941015 6187 b27afc771af565d3a9ff1ca7d16d0d46 ""
   "C:/Users/marta/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.sty" 1670403145 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "C:/Users/marta/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/marta/OneDrive/Documenti/UNIFR/INFORMATIQUE/MASTER/Enterpreneurship/PlanMy/organisational/first_proposal_doc/main.tex" 1792411902 2539 dd0b96b6200ce13e31dac11b89eed53d ""
-  "main.aux" 1792412002 266 383759942c5a49a6bd909f201bc907ad "pdflatex"
-  "main.bbl" 1792411995 486 76d65a242ec496c9b4361af646ff12cb "biber main"
-  "main.run.xml" 1792412002 2355 a79ba9251adca5ce9cc882fd4c14203b "pdflatex"
-  "main.tex" 1792411902 2539 dd0b96b6200ce13e31dac11b89eed53d ""
+  "c:/Users/marta/OneDrive/Documenti/UNIFR/INFORMATIQUE/MASTER/Enterpreneurship/PlanMy/organisational/first_proposal_doc/main.tex" 1792412208 2502 0088ffb9e10fd52ed734408a43abba9a ""
+  "main.aux" 1792412212 266 383759942c5a49a6bd909f201bc907ad "pdflatex"
+  "main.bbl" 1792412220 486 76d65a242ec496c9b4361af646ff12cb "biber main"
+  "main.run.xml" 1792412212 2355 a79ba9251adca5ce9cc882fd4c14203b "pdflatex"
+  "main.tex" 1792412208 2502 0088ffb9e10fd52ed734408a43abba9a ""
   (generated)
   "main.aux"
   "main.bcf"
