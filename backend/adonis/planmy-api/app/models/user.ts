@@ -13,10 +13,11 @@ export default class User extends compose(UserSchema, withAuthFinder(hash)) {
   declare currentAccessToken?: AccessToken
 
   get initials() {
-    const [first, last] = this.name.split(' ')
+    const parts = this.name.trim().split(/\s+/)
+    const first = parts[0]
 
-    if (first && last) {
-      return `${first.charAt(0)}${last.charAt(0)}`.toUpperCase()
+    if (parts.length > 1) {
+      return `${first.charAt(0)}${parts[parts.length - 1].charAt(0)}`.toUpperCase()
     }
 
     return first.slice(0, 2).toUpperCase()
