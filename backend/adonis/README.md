@@ -6,3 +6,9 @@ to activate:
 > npm run dev                                                 
 > Open http://localhost:3333 
 ```   
+
+
+to run backend 
+```
+node ace serve --watch
+```
