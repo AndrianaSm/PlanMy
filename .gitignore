@@ -3,3 +3,24 @@
 
 # JetBrains IDEs
 .idea/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+*.log
+
+# Build files
+dist/
+build/
+
+# Operating system
+.DS_Store
+Thumbs.db

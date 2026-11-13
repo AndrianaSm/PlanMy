@@ -4,9 +4,8 @@ Tables originally made wit PostgreSQL on DBeaver. Later migrated on Supabase to 
 
 ## Tables
 
-# PlanMy — Database Schema
 
-## 1. `users`
+### 1. `users`
 
 Stores registered users of the platform.
 
@@ -17,7 +16,7 @@ Stores registered users of the platform.
 | `email` | `VARCHAR(255)` | NOT NULL, UNIQUE | Unique email address |
 | `profile_image_url` | `TEXT` | Nullable | URL of the user's profile image |
 
-## 2. `events`
+### 2. `events`
 
 Stores events created by users.
 
@@ -37,7 +36,7 @@ Stores events created by users.
 
 Allowed values for `status`: `PLANNING`, `CONFIRMED`, `CANCELLED`.
 
-## 3. `providers`
+### 3. `providers`
 
 Stores service providers available for events.
 
@@ -57,7 +56,7 @@ Stores service providers available for events.
 
 Allowed values for `price_unit`: `PER_EVENT`, `PER_GUEST`, `PER_HOUR`.
 
-## 4. `bookings`
+### 4. `bookings`
 
 Associates an event with a provider and stores booking details.
 
@@ -78,7 +77,7 @@ Additional constraint: `UNIQUE(event_id, provider_id)` ensures that the same pro
 
 Design note: To support a provider-request and provider-confirmation workflow, consider adding `REQUESTED` and `DECLINED` to the allowed booking statuses and updating the default status and API logic accordingly.
 
-## 5. `conversations`
+### 5. `conversations`
 
 Stores conversations associated with an event and a provider.
 
@@ -94,7 +93,7 @@ Deletion behavior:
 - Deleting an event automatically deletes its conversations (`ON DELETE CASCADE`).
 - A provider cannot be deleted while associated conversations exist (`ON DELETE RESTRICT`).
 
-## 6. `messages`
+### 6. `messages`
 
 Stores messages sent within conversations.
 
@@ -110,7 +109,7 @@ Allowed values for `sender_type`: `USER`, `PROVIDER`.
 
 Deleting a conversation automatically deletes its associated messages (`ON DELETE CASCADE`).
 
-## 7. Database Indexes
+## Database Indexes
 
 Indexes improve the performance of common queries.
 
@@ -123,7 +122,7 @@ Indexes improve the performance of common queries.
 
 Primary keys and `UNIQUE` constraints also create their corresponding unique indexes in PostgreSQL.
 
-## 8. Entity Relationships
+## Entity Relationships
 
 - `users` 1:N `events` — A user can create multiple events.
 - `events` 1:N `bookings` — An event can have multiple booking records.
@@ -132,7 +131,7 @@ Primary keys and `UNIQUE` constraints also create their corresponding unique ind
 - `providers` 1:N `conversations` — A provider can participate in multiple conversations.
 - `conversations` 1:N `messages` — A conversation can contain multiple messages.
 
-## 9. Recommended Future Improvements
+##  Recommended Future Improvements
 
 - Add provider accounts linked to authenticated users.
 - Add `REQUESTED` and `DECLINED` booking statuses.
