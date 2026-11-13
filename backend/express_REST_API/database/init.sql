@@ -108,3 +108,9 @@ VALUES
      4.7, 64, 950, 'PER_EVENT', NULL)
 
 ON CONFLICT DO NOTHING;
+
+
+-- Users stores passwords and timestamp of its modification
+ALTER TABLE users
+    ADD COLUMN password VARCHAR(255),
+    ADD COLUMN updated_at TIMESTAMPTZ;
