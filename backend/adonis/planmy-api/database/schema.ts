@@ -25,13 +25,113 @@ export class AuthAccessTokenSchema extends BaseModel {
   @column()
   declare name: string | null
   @column()
-  declare tokenableId: number
+  declare tokenableId: bigint | number
   @column()
   declare type: string
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   declare updatedAt: DateTime | null
 }
 
+export class BookingSchema extends BaseModel {
+  static $columns = ['createdAt', 'eventId', 'id', 'paidAmount', 'price', 'providerId', 'serviceDate', 'status'] as const
+  $columns = BookingSchema.$columns
+  @column.dateTime({ autoCreate: true })
+  declare createdAt: DateTime
+  @column()
+  declare eventId: bigint | number
+  @column({ isPrimary: true })
+  declare id: bigint | number
+  @column()
+  declare paidAmount: string
+  @column()
+  declare price: string
+  @column()
+  declare providerId: bigint | number
+  @column.date()
+  declare serviceDate: DateTime
+  @column()
+  declare status: string
+}
+
+export class ConversationSchema extends BaseModel {
+  static $columns = ['eventId', 'id', 'providerId'] as const
+  $columns = ConversationSchema.$columns
+  @column()
+  declare eventId: bigint | number
+  @column({ isPrimary: true })
+  declare id: bigint | number
+  @column()
+  declare providerId: bigint | number
+}
+
+export class EventSchema extends BaseModel {
+  static $columns = ['budget', 'createdAt', 'date', 'eventType', 'guests', 'id', 'location', 'name', 'status', 'time', 'userId'] as const
+  $columns = EventSchema.$columns
+  @column()
+  declare budget: string
+  @column.dateTime({ autoCreate: true })
+  declare createdAt: DateTime
+  @column.date()
+  declare date: DateTime
+  @column()
+  declare eventType: string
+  @column()
+  declare guests: number
+  @column({ isPrimary: true })
+  declare id: bigint | number
+  @column()
+  declare location: string
+  @column()
+  declare name: string
+  @column()
+  declare status: string
+  @column()
+  declare time: string
+  @column()
+  declare userId: bigint | number
+}
+
+export class MessageSchema extends BaseModel {
+  static $columns = ['conversationId', 'createdAt', 'id', 'senderType', 'text'] as const
+  $columns = MessageSchema.$columns
+  @column()
+  declare conversationId: bigint | number
+  @column.dateTime({ autoCreate: true })
+  declare createdAt: DateTime
+  @column({ isPrimary: true })
+  declare id: bigint | number
+  @column()
+  declare senderType: string
+  @column()
+  declare text: string
+}
+
+export class ProviderSchema extends BaseModel {
+  static $columns = ['category', 'description', 'id', 'imageUrl', 'location', 'maxGuests', 'name', 'price', 'priceUnit', 'rating', 'reviewCount'] as const
+  $columns = ProviderSchema.$columns
+  @column()
+  declare category: string
+  @column()
+  declare description: string
+  @column({ isPrimary: true })
+  declare id: bigint | number
+  @column()
+  declare imageUrl: string | null
+  @column()
+  declare location: string
+  @column()
+  declare maxGuests: number | null
+  @column()
+  declare name: string
+  @column()
+  declare price: string
+  @column()
+  declare priceUnit: string
+  @column()
+  declare rating: string
+  @column()
+  declare reviewCount: number
+}
 
 export class UserSchema extends BaseModel {
   static $columns = [
@@ -47,7 +147,7 @@ export class UserSchema extends BaseModel {
   $columns = UserSchema.$columns
 
   @column({ isPrimary: true })
-  declare id: number
+  declare id: bigint | number
 
   @column()
   declare name: string
@@ -56,7 +156,7 @@ export class UserSchema extends BaseModel {
   declare email: string
 
   @column({ serializeAs: null })
-  declare password: string
+  declare password: string | null
 
   @column()
   declare profileImageUrl: string | null
