@@ -13,16 +13,22 @@ export type ScannedRoutes = {
     'events.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'events.update': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'events.destroy': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'providers.index': { paramsTuple?: []; params?: {} }
+    'providers.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
   }
   GET: {
     'profile.profile.show': { paramsTuple?: []; params?: {} }
     'events.index': { paramsTuple?: []; params?: {} }
     'events.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'providers.index': { paramsTuple?: []; params?: {} }
+    'providers.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
   }
   HEAD: {
     'profile.profile.show': { paramsTuple?: []; params?: {} }
     'events.index': { paramsTuple?: []; params?: {} }
     'events.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'providers.index': { paramsTuple?: []; params?: {} }
+    'providers.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
   }
   POST: {
     'auth.new_account.store': { paramsTuple?: []; params?: {} }

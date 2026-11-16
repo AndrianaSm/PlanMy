@@ -44,5 +44,12 @@ router
         })
         .prefix('events')
         .use(middleware.auth())
+
+    router
+      .group(() => {
+        router.get('/', [controllers.Providers, 'index'])
+        router.get('/:id', [controllers.Providers, 'show'])
+      })
+      .prefix('providers')
   })
   .prefix('/api/v1')

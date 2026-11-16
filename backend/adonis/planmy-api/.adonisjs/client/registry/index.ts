@@ -62,6 +62,18 @@ const routes = {
     tokens: [[0,"api"],[0,"v1"],[0,"events"],[1,"id"]],
     types: placeholder as Registry['events.destroy']['types'],
   },
+  'providers.index': {
+    methods: ["GET","HEAD"],
+    pattern: '/api/v1/providers',
+    tokens: [[0,"api"],[0,"v1"],[0,"providers"]],
+    types: placeholder as Registry['providers.index']['types'],
+  },
+  'providers.show': {
+    methods: ["GET","HEAD"],
+    pattern: '/api/v1/providers/:id',
+    tokens: [[0,"api"],[0,"v1"],[0,"providers"],[1,"id"]],
+    types: placeholder as Registry['providers.show']['types'],
+  },
 } as const satisfies Record<string, AdonisEndpoint>
 
 export { routes }

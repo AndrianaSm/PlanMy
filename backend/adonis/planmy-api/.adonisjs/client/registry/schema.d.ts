@@ -125,6 +125,32 @@ export interface Registry {
       rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/events_controller').default['destroy']>>>
     }
   }
+  'providers.index': {
+    methods: ["GET","HEAD"]
+    pattern: '/api/v1/providers'
+    types: {
+      body: {}
+      paramsTuple: []
+      params: {}
+      query: {}
+      response: ExtractResponse<Awaited<ReturnType<import('#controllers/providers_controller').default['index']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/providers_controller').default['index']>>>
+      rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/providers_controller').default['index']>>>
+    }
+  }
+  'providers.show': {
+    methods: ["GET","HEAD"]
+    pattern: '/api/v1/providers/:id'
+    types: {
+      body: {}
+      paramsTuple: [ParamValue]
+      params: { id: ParamValue }
+      query: {}
+      response: ExtractResponse<Awaited<ReturnType<import('#controllers/providers_controller').default['show']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/providers_controller').default['show']>>>
+      rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/providers_controller').default['show']>>>
+    }
+  }
 }
 
 export namespace Route {
