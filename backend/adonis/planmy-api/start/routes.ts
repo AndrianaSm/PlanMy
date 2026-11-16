@@ -52,5 +52,15 @@ router
         router.get('/:id', [controllers.Providers, 'show'])
       })
       .prefix('providers')
+
+
+    router
+      .group(() => {
+        router.get('/', [controllers.Conversations, 'index'])
+      })
+      .prefix('conversations')
+      .use(middleware.auth())
+
+      
   })
   .prefix('/api/v1')
