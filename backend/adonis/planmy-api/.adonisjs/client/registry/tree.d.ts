@@ -25,6 +25,9 @@ export interface ApiDefinition {
     update: typeof routes['events.update']
     destroy: typeof routes['events.destroy']
   }
+  bookings: {
+    store: typeof routes['bookings.store']
+  }
   providers: {
     index: typeof routes['providers.index']
     show: typeof routes['providers.show']

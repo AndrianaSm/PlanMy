@@ -13,6 +13,7 @@ export type ScannedRoutes = {
     'events.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'events.update': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'events.destroy': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'bookings.store': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'providers.index': { paramsTuple?: []; params?: {} }
     'providers.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
   }
@@ -35,6 +36,7 @@ export type ScannedRoutes = {
     'auth.access_tokens.store': { paramsTuple?: []; params?: {} }
     'profile.access_tokens.destroy': { paramsTuple?: []; params?: {} }
     'events.store': { paramsTuple?: []; params?: {} }
+    'bookings.store': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
   }
   PUT: {
     'events.update': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }

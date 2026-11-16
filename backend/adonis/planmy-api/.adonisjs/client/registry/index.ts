@@ -62,6 +62,12 @@ const routes = {
     tokens: [[0,"api"],[0,"v1"],[0,"events"],[1,"id"]],
     types: placeholder as Registry['events.destroy']['types'],
   },
+  'bookings.store': {
+    methods: ["POST"],
+    pattern: '/api/v1/events/:id/bookings',
+    tokens: [[0,"api"],[0,"v1"],[0,"events"],[1,"id"],[0,"bookings"]],
+    types: placeholder as Registry['bookings.store']['types'],
+  },
   'providers.index': {
     methods: ["GET","HEAD"],
     pattern: '/api/v1/providers',

@@ -41,6 +41,7 @@ router
           router.get('/:id', [controllers.Events, 'show'])
           router.put('/:id', [controllers.Events, 'update'])
           router.delete('/:id', [controllers.Events, 'destroy'])
+          router.post('/:id/bookings', [controllers.Bookings, 'store'])
         })
         .prefix('events')
         .use(middleware.auth())

@@ -125,6 +125,19 @@ export interface Registry {
       rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/events_controller').default['destroy']>>>
     }
   }
+  'bookings.store': {
+    methods: ["POST"]
+    pattern: '/api/v1/events/:id/bookings'
+    types: {
+      body: {}
+      paramsTuple: [ParamValue]
+      params: { id: ParamValue }
+      query: {}
+      response: ExtractResponse<Awaited<ReturnType<import('#controllers/bookings_controller').default['store']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/bookings_controller').default['store']>>>
+      rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/bookings_controller').default['store']>>>
+    }
+  }
   'providers.index': {
     methods: ["GET","HEAD"]
     pattern: '/api/v1/providers'
