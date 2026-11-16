@@ -33,5 +33,16 @@ router
       .prefix('account')
       .as('profile')
       .use(middleware.auth())
+
+    router
+      .group(() => {
+          router.post('/', [controllers.Events, 'store'])
+          router.get('/', [controllers.Events, 'index'])
+          router.get('/:id', [controllers.Events, 'show'])
+          router.put('/:id', [controllers.Events, 'update'])
+          router.delete('/:id', [controllers.Events, 'destroy'])
+        })
+        .prefix('events')
+        .use(middleware.auth())
   })
   .prefix('/api/v1')

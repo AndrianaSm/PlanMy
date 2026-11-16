@@ -32,6 +32,36 @@ const routes = {
     tokens: [[0,"api"],[0,"v1"],[0,"account"],[0,"logout"]],
     types: placeholder as Registry['profile.access_tokens.destroy']['types'],
   },
+  'events.store': {
+    methods: ["POST"],
+    pattern: '/api/v1/events',
+    tokens: [[0,"api"],[0,"v1"],[0,"events"]],
+    types: placeholder as Registry['events.store']['types'],
+  },
+  'events.index': {
+    methods: ["GET","HEAD"],
+    pattern: '/api/v1/events',
+    tokens: [[0,"api"],[0,"v1"],[0,"events"]],
+    types: placeholder as Registry['events.index']['types'],
+  },
+  'events.show': {
+    methods: ["GET","HEAD"],
+    pattern: '/api/v1/events/:id',
+    tokens: [[0,"api"],[0,"v1"],[0,"events"],[1,"id"]],
+    types: placeholder as Registry['events.show']['types'],
+  },
+  'events.update': {
+    methods: ["PUT"],
+    pattern: '/api/v1/events/:id',
+    tokens: [[0,"api"],[0,"v1"],[0,"events"],[1,"id"]],
+    types: placeholder as Registry['events.update']['types'],
+  },
+  'events.destroy': {
+    methods: ["DELETE"],
+    pattern: '/api/v1/events/:id',
+    tokens: [[0,"api"],[0,"v1"],[0,"events"],[1,"id"]],
+    types: placeholder as Registry['events.destroy']['types'],
+  },
 } as const satisfies Record<string, AdonisEndpoint>
 
 export { routes }
