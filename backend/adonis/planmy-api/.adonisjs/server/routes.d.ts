@@ -16,6 +16,7 @@ export type ScannedRoutes = {
     'bookings.store': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'providers.index': { paramsTuple?: []; params?: {} }
     'providers.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'conversations.index': { paramsTuple?: []; params?: {} }
   }
   GET: {
     'profile.profile.show': { paramsTuple?: []; params?: {} }
@@ -23,6 +24,7 @@ export type ScannedRoutes = {
     'events.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'providers.index': { paramsTuple?: []; params?: {} }
     'providers.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'conversations.index': { paramsTuple?: []; params?: {} }
   }
   HEAD: {
     'profile.profile.show': { paramsTuple?: []; params?: {} }
@@ -30,6 +32,7 @@ export type ScannedRoutes = {
     'events.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'providers.index': { paramsTuple?: []; params?: {} }
     'providers.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'conversations.index': { paramsTuple?: []; params?: {} }
   }
   POST: {
     'auth.new_account.store': { paramsTuple?: []; params?: {} }

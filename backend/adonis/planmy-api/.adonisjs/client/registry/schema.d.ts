@@ -164,6 +164,19 @@ export interface Registry {
       rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/providers_controller').default['show']>>>
     }
   }
+  'conversations.index': {
+    methods: ["GET","HEAD"]
+    pattern: '/api/v1/conversations'
+    types: {
+      body: {}
+      paramsTuple: []
+      params: {}
+      query: {}
+      response: ExtractResponse<Awaited<ReturnType<import('#controllers/conversations_controller').default['index']>>>
+      errorResponse: ExtractErrorResponse<Awaited<ReturnType<import('#controllers/conversations_controller').default['index']>>>
+      rawResponse: ExtractRawResponse<Awaited<ReturnType<import('#controllers/conversations_controller').default['index']>>>
+    }
+  }
 }
 
 export namespace Route {

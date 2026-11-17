@@ -32,4 +32,7 @@ export interface ApiDefinition {
     index: typeof routes['providers.index']
     show: typeof routes['providers.show']
   }
+  conversations: {
+    index: typeof routes['conversations.index']
+  }
 }

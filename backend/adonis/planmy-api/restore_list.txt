@@ -1,0 +1,79 @@
+;
+; Archive created at 2026-11-17 10:08:26
+;     dbname: planmy
+;     TOC Entries: 68
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.6
+;     Dumped by pg_dump version: 18.6
+;
+;
+; Selected TOC Entries:
+;
+;5; 2615 2200 SCHEMA - public pg_database_owner
+5123; 0 0 COMMENT - SCHEMA public pg_database_owner
+232; 1259 16532 TABLE public adonis_schema planmy_user
+231; 1259 16531 SEQUENCE public adonis_schema_id_seq planmy_user
+5124; 0 0 SEQUENCE OWNED BY public adonis_schema_id_seq planmy_user
+233; 1259 16542 TABLE public adonis_schema_versions planmy_user
+235; 1259 16563 TABLE public auth_access_tokens planmy_user
+234; 1259 16562 SEQUENCE public auth_access_tokens_id_seq planmy_user
+5125; 0 0 SEQUENCE OWNED BY public auth_access_tokens_id_seq planmy_user
+226; 1259 16454 TABLE public bookings postgres
+225; 1259 16453 SEQUENCE public bookings_id_seq postgres
+228; 1259 16486 TABLE public conversations postgres
+227; 1259 16485 SEQUENCE public conversations_id_seq postgres
+222; 1259 16403 TABLE public events postgres
+221; 1259 16402 SEQUENCE public events_id_seq postgres
+230; 1259 16507 TABLE public messages postgres
+229; 1259 16506 SEQUENCE public messages_id_seq postgres
+224; 1259 16432 TABLE public providers postgres
+223; 1259 16431 SEQUENCE public providers_id_seq postgres
+220; 1259 16390 TABLE public users postgres
+219; 1259 16389 SEQUENCE public users_id_seq postgres
+4904; 2604 16535 DEFAULT public adonis_schema id planmy_user
+4906; 2604 16566 DEFAULT public auth_access_tokens id planmy_user
+5113; 0 16532 TABLE DATA public adonis_schema planmy_user
+5114; 0 16542 TABLE DATA public adonis_schema_versions planmy_user
+5116; 0 16563 TABLE DATA public auth_access_tokens planmy_user
+5107; 0 16454 TABLE DATA public bookings postgres
+5109; 0 16486 TABLE DATA public conversations postgres
+5103; 0 16403 TABLE DATA public events postgres
+5111; 0 16507 TABLE DATA public messages postgres
+5105; 0 16432 TABLE DATA public providers postgres
+5101; 0 16390 TABLE DATA public users postgres
+5126; 0 0 SEQUENCE SET public adonis_schema_id_seq planmy_user
+5127; 0 0 SEQUENCE SET public auth_access_tokens_id_seq planmy_user
+5128; 0 0 SEQUENCE SET public bookings_id_seq postgres
+5129; 0 0 SEQUENCE SET public conversations_id_seq postgres
+5130; 0 0 SEQUENCE SET public events_id_seq postgres
+5131; 0 0 SEQUENCE SET public messages_id_seq postgres
+5132; 0 0 SEQUENCE SET public providers_id_seq postgres
+5133; 0 0 SEQUENCE SET public users_id_seq postgres
+4940; 2606 16541 CONSTRAINT public adonis_schema adonis_schema_pkey planmy_user
+4942; 2606 16547 CONSTRAINT public adonis_schema_versions adonis_schema_versions_pkey planmy_user
+4944; 2606 16575 CONSTRAINT public auth_access_tokens auth_access_tokens_pkey planmy_user
+4928; 2606 16474 CONSTRAINT public bookings bookings_event_id_provider_id_key postgres
+4930; 2606 16472 CONSTRAINT public bookings bookings_pkey postgres
+4933; 2606 16495 CONSTRAINT public conversations conversations_event_id_provider_id_key postgres
+4935; 2606 16493 CONSTRAINT public conversations conversations_pkey postgres
+4922; 2606 16425 CONSTRAINT public events events_pkey postgres
+4938; 2606 16520 CONSTRAINT public messages messages_pkey postgres
+4926; 2606 16452 CONSTRAINT public providers providers_pkey postgres
+4918; 2606 16401 CONSTRAINT public users users_email_key postgres
+4920; 2606 16399 CONSTRAINT public users users_pkey postgres
+4945; 1259 16581 INDEX public auth_access_tokens_tokenable_id_index planmy_user
+4931; 1259 16528 INDEX public idx_bookings_event postgres
+4936; 1259 16529 INDEX public idx_conversations_event postgres
+4923; 1259 16526 INDEX public idx_events_user_date postgres
+4924; 1259 16527 INDEX public idx_providers_category postgres
+4952; 2606 16576 FK CONSTRAINT public auth_access_tokens auth_access_tokens_tokenable_id_foreign planmy_user
+4947; 2606 16475 FK CONSTRAINT public bookings bookings_event_id_fkey postgres
+4948; 2606 16480 FK CONSTRAINT public bookings bookings_provider_id_fkey postgres
+4949; 2606 16496 FK CONSTRAINT public conversations conversations_event_id_fkey postgres
+4950; 2606 16501 FK CONSTRAINT public conversations conversations_provider_id_fkey postgres
+4946; 2606 16426 FK CONSTRAINT public events events_user_id_fkey postgres
+4951; 2606 16521 FK CONSTRAINT public messages messages_conversation_id_fkey postgres

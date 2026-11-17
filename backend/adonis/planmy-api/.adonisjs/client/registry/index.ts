@@ -80,6 +80,12 @@ const routes = {
     tokens: [[0,"api"],[0,"v1"],[0,"providers"],[1,"id"]],
     types: placeholder as Registry['providers.show']['types'],
   },
+  'conversations.index': {
+    methods: ["GET","HEAD"],
+    pattern: '/api/v1/conversations',
+    tokens: [[0,"api"],[0,"v1"],[0,"conversations"]],
+    types: placeholder as Registry['conversations.index']['types'],
+  },
 } as const satisfies Record<string, AdonisEndpoint>
 
 export { routes }
