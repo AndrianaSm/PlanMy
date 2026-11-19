@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Gradle
+.gradle/
+.kotlin/
+build/
+*/build/
+local.properties
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# Android
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# iOS / Xcode
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
